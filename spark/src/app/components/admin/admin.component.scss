@@ -1,0 +1,123 @@
+.navbar{
+    background-color: #000;
+    height: 8vh;
+}
+.vertical-nav{
+  min-width: 14rem;
+  width: 14rem;
+  height: 92vh;
+  position: fixed;
+  top: 8vh;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  background-color: #242424;
+  transition: all 0.4s;
+}
+.page-content{
+  width: calc(100% - 14rem);
+  position: absolute;
+  height: 92vh;
+  top: 8vh;
+  left: 0;
+  margin-left: 14rem;
+  transition: all 0.4s;
+}
+.active{
+    background-color: #000;
+}
+#sidebar.toggle{
+  margin-left: -14rem;
+}
+#content.toggle{
+  width: 100%;
+  margin: 0;
+}
+.nav-item {
+  padding: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media(max-width:991px){
+    .navbar{
+      background-color: #000;
+      height: 11vh;
+    }
+    .vertical-nav{
+      min-width: 10rem;
+      width: 10rem;
+      height: 89vh;
+      position: fixed;
+      top: 11vh;
+      left: 0;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+      background-color: #000;
+      transition: all 0.4s;
+    }
+    .page-content{
+      width: calc(100% - 10rem);
+      position: absolute;
+      height: 89vh;
+      top: 11vh;
+      left: 0;
+      margin-left: 10rem;
+      transition: all 0.4s;
+    }
+    #sidebar.toggle{
+      margin-left: -10rem;
+    }
+    #content.toggle{
+      width: 100%;
+      margin: 0;
+    }
+    .navbar-brand{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+}
+
+// body{
+//   background-color: rgb(216, 216, 216);
+// }
+// .bg-dark{
+//     background-color: #000 !important;
+// }
+// .navbar-toggler {
+//   color: rgba(255,255,255,.55);
+//   border-color: none !important;
+//   outline: none; 
+// }
+// #sidenav{
+//    position: sticky;
+//    width: 205px;
+//    height: 91.5vh;
+//    background-color: #000;
+// }
+// #sidenav li{
+//   padding: 10px;
+//   outline: none;
+// }
+// #sidenav li a{
+//     text-decoration: none;
+//     font-size: 14px;
+//     color: #fff;
+//     outline: none;
+//     cursor: pointer;
+// }
+// #sidenav li.active{
+//     text-decoration: none;
+//     font-size: 14px;
+//     border-bottom:  1px solid rgb(43, 135, 196);
+//     cursor: pointer;
+//     background-color: rgb(36, 36, 36);
+//     color: #fff;
+//     outline: none;
+// }
+// #sidenav li:hover{
+//     text-decoration: none;
+//     font-size: 14px;
+//     background-color: rgb(36, 36, 36);
+//     color: #fff;
+//     outline: none;
+// }

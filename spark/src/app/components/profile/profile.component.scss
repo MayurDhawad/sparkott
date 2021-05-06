@@ -1,0 +1,38 @@
+section{
+    background-color: #000;
+}
+.main-card{
+    height: 444px;
+    background-color: #0e0e0e;
+}
+a{
+    color: #fff;
+}
+.nav-pills, .nav-link{
+    font-size: 14px;
+    color: #fff;
+    border-radius: 0px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #2a2929;
+}
+.nav-pills .nav-link:hover {
+    color: #fff;
+    background-color: #222020;
+}
+.border-bottom {
+    border-bottom: 1px solid #363636!important;
+}
+.spacing{
+    width: 38%;
+}
+.plan-card{
+    background-color: #1b1b1b;
+    color: #fff;
+}
+@media (min-width: 1200px) and (max-width:1440px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1234px;
+    }
+}

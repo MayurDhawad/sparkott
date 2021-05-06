@@ -1,0 +1,78 @@
+@import '../../../styles.scss';
+
+section{
+    background-color: rgb(14, 14, 14);
+}
+.text-color{
+    color: $color-light;
+}
+a{
+    text-decoration: none;
+    color: $color-light;
+    border: 1px solid $color-light;
+    padding: 3px 10px;
+    margin: 6px 0px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.card,.card img{
+    height: auto;
+}
+
+#popular{
+    padding: 30px 0px 20px;
+}
+#coming-soon,
+#action,
+#originals,
+#comedy,
+#crime{
+    padding: 20px 0px;
+}
+@media(min-width:300px) and (max-width:575.98px){
+    .container{
+        max-width:100%;
+        padding: 0px 10px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    a{
+        padding: 2px 5px;
+        font-size: 10px;
+    }
+    #popular{
+        padding: 30px 0px 0px;
+    }
+    #coming-soon,
+    #action,
+    #originals,
+    #comedy,
+    #crime{
+        padding: 5px 0px;
+    }
+}
+@media(min-width:576px) and (max-width:767.98px){
+    .container{
+        max-width:100%;
+        padding: 0px 5px;
+    }
+    // .card,.card img{
+    //     height: 150px;
+    // }
+}
+@media(min-width:768px) and (max-width:991.98px){
+    .container{
+        max-width:100%;
+        padding: 0px 50px;
+    }
+    // .card,.card img{
+    //     height: 150px;
+    // }
+}
+@media(min-width:1200px) and (max-width:1440px){
+    .container{
+        max-width: 1250px;
+    }
+}
+

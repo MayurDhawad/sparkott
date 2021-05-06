@@ -1,0 +1,185 @@
+
+<section>
+    <div class="container-fluid">
+        <div class="d-flex w-100 justify-content-end mb-2">
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addModal"> <i class="bi bi-camera-reels"> </i> Add New Movie</button>
+        </div>
+        <div class="row table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr class="text-center">
+                        <th>Image</th>
+                        <th>Movie</th>
+                        <th>Language</th>
+                        <th>Type</th>
+                        <th>Description</th> 
+                        <th>Cast</th>
+                        <th>Producers</th>
+                        <th>Directors</th>
+                        <th>Writers</th>
+                        <th>Release Date</th>  
+                        <th>Actions </th>  
+                    </tr>        
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let movie of movies">
+                        <td><img src="{{movie.image}}" alt=""></td>
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.language}}</td>
+                        <td>{{movie.type}}</td>
+                        <td>{{movie.description}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.producers}}</td>
+                        <td>{{movie.directors}}</td>
+                        <td>{{movie.writers}}</td>
+                        <td>{{movie.release_date}}</td>
+                        <td class="d-flex justify-content-center">
+                            <i class="bi bi-pencil-square text-primary fs-5 mx-2" (click)="openupdateModal(movie)"  data-bs-toggle="modal" href="#updateModal" role="button"></i>
+                            <i class="bi bi-trash text-danger mx-2 fs-5" (click)="deletemovie(movie)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center py-2">
+                    <h4 class="modal-title text-uppercase" id="addModalLabel">Add New Movie</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="addnewMovie">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div>
+                                    <label class="form-label">Title:</label>
+                                    <input type="text" formControlName="title" [class.is-invalid]="addnewMovie.get('title').invalid && addnewMovie.get('title').touched" class="form-control" placeholder="Enter Movie Title">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Type:</label>
+                                    <input type="text" formControlName="type" [class.is-invalid]="addnewMovie.get('type').invalid && addnewMovie.get('type').touched" class="form-control" placeholder="Enter type of Movie">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Cast:</label>
+                                    <input type="text" formControlName="cast" [class.is-invalid]="addnewMovie.get('cast').invalid && addnewMovie.get('cast').touched" class="form-control" placeholder="Enter Cast">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Language:</label>
+                                    <input type="text" formControlName="language" [class.is-invalid]="addnewMovie.get('language').invalid && addnewMovie.get('language').touched" class="form-control" placeholder="Enter Language">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Release Date:</label>
+                                    <input type="text" formControlName="release_date" [class.is-invalid]="addnewMovie.get('release_date').invalid && addnewMovie.get('release_date').touched" class="form-control" placeholder="Enter Language">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Description:</label>
+                                    <input type="text" formControlName="description" [class.is-invalid]="addnewMovie.get('description').invalid && addnewMovie.get('description').touched" class="form-control" placeholder="Enter Language">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Directors:</label>
+                                    <input type="text" formControlName="directors" [class.is-invalid]="addnewMovie.get('directors').invalid && addnewMovie.get('directors').touched" class="form-control" placeholder="Enter Language">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Producers:</label>
+                                    <input type="text" formControlName="producers" [class.is-invalid]="addnewMovie.get('producers').invalid && addnewMovie.get('producers').touched" class="form-control" placeholder="Enter Language">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Writers:</label>
+                                    <input type="text" formControlName="writers" [class.is-invalid]="addnewMovie.get('writers').invalid && addnewMovie.get('writers').touched" class="form-control" placeholder="Enter Language">
+                                </div>
+                            </div>            
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" (click)="addMovie()" data-bs-dismiss="modal"> + Add Movie</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="updateModal" aria-hidden="true" aria-labelledby="v-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="text-uppercase mb-0">Update Movie</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3 mt-md-0 mt-lg-0" for="title">Title* :</label>
+                            <input type="text" #title="ngModel" [class.is-invalid]="title.invalid && title.touched" [(ngModel)]="newmovie.title" name="title" value="selectedMovie" class="form-control" placeholder="Title" required minlength="1">
+                            <small class="text-danger" [class.d-none]="title.valid || title.untouched">Please enter title</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label" for="type">Type* :</label>
+                            <input type="text" #type="ngModel" [class.is-invalid]="type.invalid && type.touched"  [(ngModel)]="newmovie.type" name="type" class="form-control" placeholder="Type" required minlength="1">
+                            <small class="text-danger" [class.d-none]="type.valid || type.untouched">Type is required</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="cast">Cast* :</label>
+                            <input type="text" #cast="ngModel" [class.is-invalid]="cast.invalid && cast.touched" [(ngModel)]="newmovie.cast" name="cast" class="form-control" placeholder="Cast" required minlength="1">
+                            <small class="text-danger" [class.d-none]="cast.valid || cast.untouched">Cast is required</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="directors">Directors* :</label>
+                            <input type="text" #directors="ngModel" [class.is-invalid]="directors.invalid && directors.touched" [(ngModel)]="newmovie.directors" name="directors" class="form-control" placeholder="Directors" required minlength="1">
+                            <small class="text-danger" [class.d-none]="directors.valid || directors.untouched">Directors is required</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="release_date">Release Date* :</label>
+                            <input type="text" #release_date="ngModel" [class.is-invalid]="release_date.invalid && release_date.touched" [(ngModel)]="newmovie.release_date" name="release_date" class="form-control" placeholder="Release Date" required minlength="1">
+                            <small class="text-danger" [class.d-none]="release_date.valid || release_date.untouched">Release Date is required</small>
+                        </div>   
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="language">Language* :</label>
+                            <input type="text" #language="ngModel" [class.is-invalid]="language.invalid && language.touched" [(ngModel)]="newmovie.language" name="language" class="form-control" placeholder="Language" required minlength="1">
+                            <small class="text-danger" [class.d-none]="language.valid || language.untouched">Language Date is required</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="description">Description* :</label>
+                            <input type="text" #description="ngModel" [class.is-invalid]="description.invalid && description.touched" [(ngModel)]="newmovie.description" name="description" class="form-control" placeholder="Description" required minlength="1">
+                            <small class="text-danger" [class.d-none]="description.valid || description.untouched">Description is required</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="producers">Producers* :</label>
+                            <input type="text" #producers="ngModel" [class.is-invalid]="producers.invalid && producers.touched" [(ngModel)]="newmovie.producers" name="producers" class="form-control" placeholder="Producers" required minlength="1">
+                            <small class="text-danger" [class.d-none]="producers.valid || producers.untouched">Producers is required</small>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label class="form-label mt-3" for="writers">Writers* :</label>
+                            <input type="text" #writers="ngModel" [class.is-invalid]="writers.invalid && writers.touched" [(ngModel)]="newmovie.writers" name="writers" class="form-control" placeholder="Writers" required minlength="1">
+                            <small class="text-danger" [class.d-none]="writers.valid || writers.untouched">Writers is required</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="submit" class="btn btn-primary btn-sm" data-bs-dismiss="modal" (click)="updateMovie()">Update Movie</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<section>
+    <div class="container py-5">
+        <div class="row mx-auto">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mx-auto">    
+                <div class="card border-dark">
+                    <img class="rounded" src="{{movies.src}}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+                <div class="card mt-3 mt-md-0">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-white text-uppercase mb-0">{{movies.title}}</h4>
+                            <span class="badge bg-info mt-2">5.00 <i class="bi bi-star"></i></span>
+                        </div>
+                        <small class="text-info">{{movies.languages}}</small><br>
+                        <small class="text-info"><i class="bi bi-tag"></i> {{movies.type}}</small>
+                        <p class="text-white my-3">{{movies.description}}</p>
+                        
+                        <div class="my-3">
+                            <ul class="list-unstyled text-white text-right">
+                                <li><span class="text-info">Cast</span> : <span>{{movies.cast}}</span></li>
+                                <li><span class="text-info">Producers</span> : {{movies.producers}}</li>
+                                <li><span class="text-info">Directors</span> : {{movies.directors}}</li>
+                                <li><span class="text-info">Writers</span> : {{movies.writers}}</li>
+                                <li><span class="text-info">Release Data</span> : {{movies.release}}</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex">
+                            <button class="btn btn-gradient-sm mx-1">Write Review</button>
+                            <button class="btn btn-gradient-sm mx-1" routerLink="/subscribe">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

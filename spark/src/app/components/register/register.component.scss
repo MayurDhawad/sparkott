@@ -1,0 +1,74 @@
+@import '../../../styles.scss'; 
+
+section{
+    background-color: #000;
+}
+.container{
+    height: 89vh;
+}
+.card{
+    background-color: #0d1118;
+    .card-header{
+        h4,h6{
+            color: #c19a24;
+        }
+    }
+    .card-body{
+        h5{
+            margin-top: 20px;
+            font-size: 15px;
+            color: #464646;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+input[type=text],input[type=email], input[type=password],input[type=tel], select, textarea {
+    background-color: rgba(78,78,78,.2);
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+}
+
+.btn-facebook, .btn-google, .btn-via {
+    padding: 6px 30px 6px 50px;
+    border-radius: 3px;
+    min-width: 160px;
+    box-shadow: none!important;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+}
+.btn-google {
+    background: #db4a39;
+}
+.btn-facebook{
+    background: #0263b9;
+}
+.btn-facebook i, .btn-google i, .btn-via i {
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 37px;
+    top: 0;
+    line-height: 36px;
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+@media(min-width:300px) and(max-width:767px){
+    .container{
+        height:auto;
+    }
+    .card{
+        margin-bottom: 25px;
+    }
+}

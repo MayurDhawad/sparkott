@@ -1,0 +1,95 @@
+@import '../../../styles.scss'; 
+section{
+    background-color: #000;
+}
+.container{
+    height: 89vh;
+}
+.card{
+    background-color: #0d1118;
+        .card-header {
+            padding: .5rem 1rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.03);
+            border-bottom: 1px solid rgba(141, 135, 135, 0.125);
+            h3,h6{
+                color: #c19a24;
+                font-size: 22px;
+            }
+        }
+        .card-body{
+            h5{
+                margin-top: 20px;
+                font-size: 15px;
+                color: #464646;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+}
+h4{
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+}
+
+.nav-link{
+    background: $color-light !important;
+    background: linear-gradient(0deg,$color-light 4%,$color-dark 50%,$color-light 96%) !important;
+    border: none;
+    font-weight: 600;
+    box-shadow: none!important;
+    width: 100%;
+    padding: .40rem 1.0rem;
+    color: $color;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+input[type=text],input[type=email], input[type=password],input[type=tel], select, textarea {
+    background-color: rgba(78,78,78,.2);
+    color: $color;
+    border: none;
+    border-radius: .25rem;
+}
+
+.btn-facebook, .btn-google, .btn-via {
+    padding: 6px 30px 6px 50px;
+    border-radius: 3px;
+    min-width: 160px;
+    box-shadow: none!important;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 0px;
+    position: relative;
+}
+.btn-google {
+    background: #db4a39;
+}
+.btn-facebook i, .btn-google i, .btn-via i {
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 37px;
+    top: 0;
+    line-height: 36px;
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+
+@media(min-width:300px) and(max-width:767px){
+    .container{
+        height:auto;
+    }
+    .card{
+        margin-bottom: 25px;
+    }
+}

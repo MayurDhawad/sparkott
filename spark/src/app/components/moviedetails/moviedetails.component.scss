@@ -1,0 +1,22 @@
+@import '../../../styles.scss';
+
+section{
+    background-color: rgb(14, 14, 14);
+}
+.card{
+    background-color: #0d1118;
+    p{
+        font-size: 14px;
+    }
+}
+ul{
+    li{
+        margin: 8px 0;
+        font-size: 14px;
+    }
+}
+@media(min-width:1200px) and (max-width:1440px){
+    .container{
+        max-width: 1250px;
+    }
+}

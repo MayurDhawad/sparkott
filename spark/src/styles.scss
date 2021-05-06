@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+$bg-color-light: #0dcaf0;
+$bg-color-dark: #146070;
+
+$color:#fff;
+$color-light: #0dcaf0;
+$color-dark: #146070;
+
+$border-light: #0dcaf0;
+$border-dark: #146070;
+
+$font-family: 'Open Sans', sans-serif;
+ 
+.btn-color {
+    color: $color;
+    background-color: $bg-color-light;
+    border-color: 1px solid $border-light;
+    &:hover{
+        color: $color;
+        background-color: $bg-color-dark;
+        border-color: 1px solid $bg-color-dark;
+    }
+}
+
+.btn.btn-gradient {
+    background: $color-light;
+    background-image: linear-gradient(0deg,$bg-color-light 4%,$bg-color-dark 50%,$bg-color-light 96%)!important;
+    border: none;
+    font-weight: 600;
+    box-shadow: none!important;
+    padding: .65rem 1.5rem;
+    color: $color;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    &:hover{
+        color: $color;
+        background-color: $bg-color-dark;
+        border-color: 1px solid $bg-color-dark;
+    }
+}
+.btn.btn-gradient-sm {
+    background:$bg-color-light;
+    background-image: linear-gradient(0deg,$bg-color-light 4%,$bg-color-dark 50%,$bg-color-light 96%)!important;
+    border: none;
+    font-weight: 600;
+    box-shadow: none!important;
+    padding: .40rem 1.0rem;
+    color: $color;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    &:hover{
+        color: $color;
+        background-color: $bg-color-dark;
+        border-color: 1px solid $bg-color-dark;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,79 @@
+<!-------------------- Navbar -------------------->
+<header>
+    <nav class="navbar navbar-expand-lg shadow fixed-top navbar-dark py-0">
+        <div class="container-fluid justify-content-start">
+            <a id="collapse">
+                <i class="bi bi-list text-white fs-3 me-2"></i>
+            </a>
+            <a class="navbar-brand py-0" routerLink="/">
+                <img src="../../../assets/logo.PNG" class="img-fluid" alt="">
+            </a>
+        </div>
+      </nav>
+</header>
+
+<!-------------------- Sidenav ------------------>
+<div class="vertical-nav" id="sidebar">
+    <ul class="nav flex-column mb-0">
+        <li class="nav-item" [routerLink]="['/admin/dashboard']" routerLinkActive="active"> 
+            <a class="nav-link text-white"  >
+                <i class="bi bi-speedometer me-3 text-white" ></i>Dashboard
+            </a>
+        </li>
+        <li class="nav-item" [routerLink]="['/admin/users']" routerLinkActive="active"> 
+            <a class="nav-link text-white" >
+                <i class="bi bi-person-bounding-box me-3 text-white"></i>Users
+            </a>
+        </li>
+        <li class="nav-item" [routerLink]="['/admin/adminmovies']" routerLinkActive="active"> 
+            <a class="nav-link text-white">
+                <i class="bi bi-camera-reels me-3 text-white"></i>Movies
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<!---------------------- Page Content ------------------------->
+
+<section class="page-content p-3" id="content">
+    <router-outlet></router-outlet>
+</section>
+
+
+<!-- <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow py-0">
+        <div class="container-fluid">
+            <a class="navbar-brand py-0" href="#">
+                <img src="../../../assets/logo.PNG" alt="">
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <button class="navbar-toggler d-block" type="button" data-bs-toggle="collapse" data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""><i class="bi bi-list fs-3"></i></span>
+                </button>
+            </ul>
+           
+        </div>
+    </nav>
+</header> -->
+
+<!-- <div id="sidenav" class="collapse navbar-collapse">
+    <div class="container-fluid px-0">
+        <ul class="list-unstyled">
+            <li routerLink="/admin/dashboard" routerLinkActive="active"><a>Dashboard</a></li>
+            <li routerLink="/admin/users" routerLinkActive="active"><a>Users</a></li>
+            <li routerLink="/admin/movies" routerLinkActive="active"><a>Movies</a></li>
+            <li routerLink="/admin/special" routerLinkActive="active"><a>Special</a></li>
+        </ul>
+    </div>
+</div>
+
+<section>
+    <div class="container-fluid p-3">
+        <router-outlet></router-outlet>
+    </div>
+</section> -->
+
+  
+
+  

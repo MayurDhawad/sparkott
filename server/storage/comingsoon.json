@@ -1,0 +1,10 @@
+[
+    {"id":1, "name":"Comingsoon1", "src":"../../../assets/comingsoon/soon1.png"},
+    {"id":2, "name":"Comingsoon2", "src":"../../../assets/comingsoon/soon2.png"},
+    {"id":3, "name":"Comingsoon3", "src":"../../../assets/comingsoon/soon3.png"},
+    {"id":4, "name":"Comingsoon4", "src":"../../../assets/comingsoon/soon4.png"},
+    {"id":5, "name":"Comingsoon5", "src":"../../../assets/comingsoon/soon5.png"},
+    {"id":6, "name":"Comingsoon6", "src":"../../../assets/comingsoon/soon6.png"},
+    {"id":7, "name":"Comingsoon7", "src":"../../../assets/comingsoon/soon7.png"},
+    {"id":8, "name":"Comingsoon8", "src":"../../../assets/comingsoon/soon8.png"}
+]

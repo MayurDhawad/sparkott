@@ -1,0 +1,8 @@
+[
+    {"id":1, "title":"Originals1", "src":"../../../assets/originals/originals1.jpg"},
+    {"id":2, "title":"Originals2", "src":"../../../assets/originals/originals2.jpg"},
+    {"id":3, "title":"Originals3", "src":"../../../assets/originals/originals3.jpg"},
+    {"id":4, "title":"Originals4", "src":"../../../assets/originals/originals4.jpg"},
+    {"id":5, "title":"Originals5", "src":"../../../assets/originals/originals5.jpg"},
+    {"id":6, "title":"Originals6", "src":"../../../assets/originals/originals6.jpg"}
+]

@@ -1,0 +1,8 @@
+[
+    {"id":1, "title":"Banner1", "src":"../../../assets/banner/banner1.jpg"},
+    {"id":2, "title":"Banner2", "src":"../../../assets/banner/banner2.jpg"},
+    {"id":3, "title":"Banner3", "src":"../../../assets/banner/banner3.jpg"},
+    {"id":4, "title":"Banner4", "src":"../../../assets/banner/banner4.jpg"},
+    {"id":5, "title":"Banner5", "src":"../../../assets/banner/banner5.jpg"},
+    {"id":6, "title":"Banner6", "src":"../../../assets/banner/banner6.jpg"}
+]

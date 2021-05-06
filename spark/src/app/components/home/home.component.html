@@ -1,0 +1,179 @@
+<app-header></app-header>
+
+<section class="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../../assets/banner/banner1.jpg" class="d-block w-100" alt="Dcompany">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../assets/banner/banner2.jpg" class="d-block w-100" alt="Anjali CBI">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../assets/banner/banner3.jpg" class="d-block w-100" alt="Kanabadutaledu">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../assets/banner/banner4.jpg" class="d-block w-100" alt="Manishi">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../assets/banner/banner5.jpg" class="d-block w-100" alt="Prem Kahani">
+            </div>
+            <div class="carousel-item">
+                <img src="../../../assets/banner/banner6.jpg" class="d-block w-100" alt="Flat no 143">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<div class="container py-5">
+    <form class="d-flex position-relative">
+        <input class="form-control search" [(ngModel)]="nameSearch" type="search" placeholder="Search" aria-label="Search">
+        <i type="submit" class="bi bi-search position-absolute top-50 end-0 translate-middle-y"></i>
+    </form>
+</div>
+
+<section id="popular" >
+    <div class="container pb-3 border-bottom border-dark">
+        <div class="row">
+            <div class="d-flex mb-0 mb-md-2">
+                <img class="img-fluid" src="../../../assets/icon.png" alt="icon">
+                <h4 class="text-color me-3 text-uppercase my-auto">Popular </h4>
+                <a class="ms-auto" [routerLink]="['/movies']">View All</a>
+            </div>
+            <owl-carousel-o [options]="customOptions">
+                <ng-container  *ngFor="let popul of popular | filter">
+                    <ng-template  carouselSlide>
+                        <div (click)="onselect(popul)" class="card border-0 shadow-lg rounded-3">
+                            <img class="img-fluid rounded-3" src="{{popul.src}}" alt="">
+                        </div>
+                    </ng-template>
+                  </ng-container>     
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<section id="coming-soon" >
+    <div class="container pb-3 border-bottom border-dark">
+        <div class="row">
+            <div class="d-flex justify-content-between mb-0 mb-md-2">
+                <img class="img-fluid" src="../../../assets/icon.png" alt="icon">
+                <h4 class="text-color me-3 text-uppercase my-auto">Comming Soon </h4>
+                <a class="ms-auto" [routerLink]="['/movies']">View All</a>
+            </div>
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let soon of comingsoon">
+                    <ng-template carouselSlide>
+                        <div class="card border-0 shadow-lg rounded-3">
+                            <img class="img-fluid rounded-3" src="{{soon.src}}" alt="">
+                        </div>
+                    </ng-template>
+                  </ng-container>     
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<section id="action" >
+    <div class="container pb-3 border-bottom border-dark">
+        <div class="row">
+            <div class="d-flex justify-content-between mb-0 mb-md-2">
+                <img class="img-fluid" src="../../../assets/icon.png" alt="icon">
+                <h4 class="text-color me-3 text-uppercase my-auto">Action </h4>
+                <a class="ms-auto" [routerLink]="['/movies']">View All</a>
+            </div>
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let acti of action">
+                    <ng-template carouselSlide>
+                        <div class="card border-0 shadow-lg rounded-3">
+                            <img class="img-fluid rounded-3" src="{{acti.src}}" alt="">
+                        </div>
+                    </ng-template>
+                  </ng-container>     
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<section id="originals">
+    <div class="container pb-3 border-bottom border-dark">
+        <div class="row">
+            <div class="d-flex justify-content-between mb-0 mb-md-2">
+                <img class="img-fluid" src="../../../assets/icon.png" alt="icon">
+                <h4 class="text-color me-3 text-uppercase my-auto">Originals </h4>
+                <a class="ms-auto" [routerLink]="['/movies']">View All</a>
+            </div>
+            <owl-carousel-o [options]="originals1">
+                <ng-container *ngFor="let orig of originals">
+                    <ng-template carouselSlide>
+                        <div class="card border-0 shadow-lg rounded-3">
+                            <img class="img-fluid rounded-3" src="{{orig.src}}" alt="">
+                        </div>
+                    </ng-template>
+                  </ng-container>     
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<section id="comedy" >
+    <div class="container pb-3 border-bottom border-dark">
+        <div class="row">
+            <div class="d-flex justify-content-between mb-0 mb-md-2">
+                <img class="img-fluid" src="../../../assets/icon.png" alt="icon">
+                <h4 class="text-color me-3 text-uppercase my-auto">Comedy </h4>
+                <a class="ms-auto" [routerLink]="['/movies']">View All</a>
+            </div>
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let com of comedy">
+                    <ng-template carouselSlide>
+                        <div class="card border-0 shadow-lg rounded-3">
+                            <img class="img-fluid rounded-3" src="{{com.src}}" alt="">
+                        </div>
+                    </ng-template>
+                  </ng-container>     
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<section id="crime" >
+    <div class="container pb-3 border-bottom border-dark">
+        <div class="row">
+            <div class="d-flex justify-content-between mb-0 mb-md-2">
+                <img class="img-fluid" src="../../../assets/icon.png" alt="icon">
+                <h4 class="text-color me-3 text-uppercase my-auto">Crime </h4>
+                <a class="ms-auto" [routerLink]="['/movies']">View All</a>
+            </div>
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let cri of crime">
+                    <ng-template carouselSlide>
+                        <div class="card border-0 shadow-lg rounded-3">
+                            <img class="img-fluid rounded-3" src="{{cri.src}}" alt="">
+                        </div>
+                    </ng-template>
+                  </ng-container>     
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

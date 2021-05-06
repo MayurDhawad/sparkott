@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<section>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-12 col-sm-12 col-md-10 col-lg-8 mx-auto">
+                <div class="card shadow mt-5 mt-md-none">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-last order-md-first">
+                            <div class="card-header">
+                                <h4 class="text-center text-color text-uppercase">Register</h4>
+                            </div>
+                            <div class="card-body">
+                                <form #userForm="ngForm">
+                                    <input type="text" name="name" [(ngModel)]="registerUser.name" class="form-control mt-1" placeholder="Name">
+                                    <input type="email" name="email" [(ngModel)]="registerUser.email" class="form-control mt-3" placeholder="Email">
+                                    <!-- <div class="input-group mt-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>+91 </option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <input type="tel" class="form-control" style="width: 60%;" aria-label="Text input with dropdown button">
+                                    </div> -->
+                                    <input type="tel" name="phone" [(ngModel)]="registerUser.phone" class="form-control mt-3" placeholder="Phone">
+                                    <input type="password" name="password" [(ngModel)]="registerUser.password" class="form-control mt-3" placeholder="Password">
+                                    <input type="password" name="cnfpassword" [(ngModel)]="registerUser.cnfpassword" class="form-control mt-3" placeholder="Confirm Password">
+                                    <button type="submit" [disabled]="userForm.form.invalid" class="btn btn-gradient w-100 mt-3" (click)="registerNewUser()">Register</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 border-start border-dark mb-3 mb-md-0">
+                            <div class="card-header">
+                                <h6 class="text-center text-color text-uppercase">Register with social media</h6>
+                            </div>
+                            <div class="card-body px-5 mt-0 text-center mt-lg-5 mt-1">
+                                <button class="btn btn-google mt-2"><i class="bi bi-google"></i>Google</button>
+                                <h4 class="text-center text-white my-3">OR</h4>
+                                <button class="btn btn-facebook"><i class="bi bi-facebook"></i>Facebook</button>
+                                <h5 class="text-white">Already have an Account?  <a routerLink="/login"> Signin</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
